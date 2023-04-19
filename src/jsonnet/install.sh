@@ -1,10 +1,11 @@
 #!/bin/sh
 set -e
 
-echo "Activating feature 'hello'"
+echo "Activating feature 'jsonnet'"
 
-GREETING=${GREETING:-undefined}
-echo "The provided greeting is: $GREETING"
+version=${VERSION:-undefined}
+echo "The provided version is: $VERSION"
+echo $version
 
 # The 'install.sh' entrypoint script is always executed as the root user.
 #
@@ -18,12 +19,6 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
-cat > /usr/local/bin/hello \
-<< EOF
-#!/bin/sh
-RED='\033[0;91m'
-NC='\033[0m' # No Color
-echo "\${RED}${GREETING}, \$(whoami)!\${NC}"
-EOF
 
-chmod +x /usr/local/bin/hello
+curl --silent -L "https://github.com/google/go-jsonnet/releases/download/v${version}/go-jsonnet_${version}_Linux_x86_64.tar.gz" | tar -xz --touch -C /usr/local/bin --wildcards 'jsonnet*'
+chmod +x /usr/local/bin/jsonnet /usr/local/bin/jsonnetfmt

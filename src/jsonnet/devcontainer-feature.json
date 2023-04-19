@@ -1,0 +1,13 @@
+{
+    "name": "jsonnet",
+    "id": "jsonnet",
+    "version": "1.0.0",
+    "description": "Install jsonnet",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "0.19.1",
+            "description": "Select a version of jsonnet to install"
+        }
+    }
+}
