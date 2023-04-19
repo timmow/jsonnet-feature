@@ -14,6 +14,7 @@ jobs:
       matrix:
         features:
           - jsonnet
+          - jb
         baseImage:
           - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
@@ -32,6 +33,7 @@ jobs:
       matrix:
         features:
           - jsonnet
+          - jb
     steps:
       - uses: actions/checkout@v3
 

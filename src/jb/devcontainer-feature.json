@@ -1,0 +1,13 @@
+{
+    "name": "jb",
+    "id": "jb",
+    "version": "1.0.0",
+    "description": "Install jb",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "0.5.1",
+            "description": "Select a version of jb to install"
+        }
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "jsonnet": {
+    "jb": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {
@@ -8,9 +8,6 @@
                 "upgradePackages": false
             },
             "jsonnet": {
-                "version": "0.19.1"
-            }
-            "jb": {
                 "version": "0.5.1"
             }
         }
